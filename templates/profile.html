@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<style>
+    /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Profile container */
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Profile card styling */
+  .profile-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Profile image styling */
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  /* Profile details */
+  .profile-details h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .profile-details .email {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .profile-details .info {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Sign out button styling */
+  .signout-btn {
+    background-color: #569951;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signout-btn:hover {
+    background-color: #0e8f48;
+  }
+  
+</style>
+
+<body>
+
+  <div class="profile-container">
+    <div class="profile-card">
+      <div class="profile-image">
+        <img src="{{ profile_image }}" alt="User Image">
+      </div>
+      <div class="profile-details">
+        <h2>Welcome, {{ name }}!</h2>
+        <p class="email">Email: {{ email }}</p>
+        <p class="info">You have successfully signed in to your account.</p>
+        <button class="signout-btn">Sign Out</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
