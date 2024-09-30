@@ -9,14 +9,13 @@
 
 <style>
 
-/* Basic reset to remove default padding/margin */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Styling for the navbar */
 .navbar {
   height: 43px;
   background-color: #10561f; /* Navbar background color */
@@ -77,6 +76,7 @@
 }
 
 .title {
+  color: white;
   font-size: 1.5em;
   font-weight: 900;
   text-align: center;
@@ -134,6 +134,7 @@
       <li><a href="central-schemes.html">Central Schemes</a></li>
       <li><a href="state-schemes.html">State Schemes</a></li>
       <li><a href="profile.html">Profile</a></li>
+      <li><a href="">Check Eligible Schemes</a></li>
     </ul>
   </nav>
 
@@ -142,7 +143,7 @@
     <div class="flip-card"  >
         <div class="flip-card-inner">
             <div class="flip-card-front" >
-                <p class="title">FLIP CARD</p>
+                <p class="title">Pradhan Mantri Awaas Yojana</p>
                 <p>Hover Me</p>
             </div>
             <div class="flip-card-back">
@@ -155,7 +156,7 @@
     <div class="flip-card">
       <div class="flip-card-inner">
           <div class="flip-card-front">
-              <p class="title">FLIP CARD</p>
+              <p class="title">Pradhan Mantri Krishi Yojana</p>
               <p>Hover Me</p>
           </div>
           <div class="flip-card-back">
@@ -168,7 +169,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
         <div class="flip-card-front">
-            <p class="title">FLIP CARD</p>
+            <p class="title">Pradhan Mantri Kaushal Vikas Yojana </p>
             <p>Hover Me</p>
         </div>
         <div class="flip-card-back">
@@ -182,7 +183,7 @@
 <div class="flip-card">
   <div class="flip-card-inner">
       <div class="flip-card-front">
-          <p class="title">FLIP CARD</p>
+          <p class="title">Pradhan Mantri Matru Vandana Yojana</p>
           <p>Hover Me</p>
       </div>
       <div class="flip-card-back">
@@ -195,7 +196,7 @@
 <div class="flip-card">
   <div class="flip-card-inner">
       <div class="flip-card-front">
-          <p class="title">FLIP CARD</p>
+          <p class="title">Pradhan Mantri Jan Dhan Yojana</p>
           <p>Hover Me</p>
       </div>
       <div class="flip-card-back">
@@ -209,7 +210,7 @@
 <div class="flip-card">
   <div class="flip-card-inner">
       <div class="flip-card-front">
-          <p class="title">FLIP CARD</p>
+          <p class="title">Swachh Bharat Mission</p>
           <p>Hover Me</p>
       </div>
       <div class="flip-card-back">
@@ -222,7 +223,7 @@
 <div class="flip-card">
   <div class="flip-card-inner">
       <div class="flip-card-front">
-          <p class="title">FLIP CARD</p>
+          <p class="title">Beti Bachao Beti Padhao</p>
           <p>Hover Me</p>
       </div>
       <div class="flip-card-back">
@@ -235,7 +236,7 @@
 <div class="flip-card">
   <div class="flip-card-inner">
       <div class="flip-card-front">
-          <p class="title">FLIP CARD</p>
+          <p class="title">Digital India Programme</p>
           <p>Hover Me</p>
       </div>
       <div class="flip-card-back">
@@ -246,6 +247,25 @@
 </div>
 </div>
   </div>
+
+
+  <script>
+    // Function to handle scroll animations
+    const placards = document.querySelectorAll('.placard');
+    const showPlacards = () => {
+        placards.forEach(placard => {
+            const placardPosition = placard.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (placardPosition < screenPosition) {
+                placard.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', showPlacards);
+    showPlacards(); // Initial check to show placards on page load
+</script>
   
 
 </body>
